@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Order</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Map Container -->
+<div class="map-container">
+    <!-- Google Maps content here -->
+    <!-- For demonstration purposes, assume an embedded Google Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21828.55104867464!2d-122.41941543749999!3d37.77492949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858084e8e3ccdd%3A0x6a1d195d81582a1c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1647250121316!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Delivery Boy Section -->
+<div class="deliveryboy-section">
+    <select id="deliveryboy-list">
+        <option value="">Select Delivery Boy</option>
+        <!-- Populate this dropdown with delivery boy names -->
+        <option value="1">Delivery Boy 1</option>
+        <option value="2">Delivery Boy 2</option>
+        <option value="3">Delivery Boy 3</option>
+        <!-- Add more options as needed -->
+    </select>
+    <button class="btn btn-primary" onclick="assignOrder()">Assign Order</button>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function assignOrder() {
+        // Logic for assigning order goes here
+        alert("Order assigned successfully.");
+    }
+</script>
+</body>
+</html>

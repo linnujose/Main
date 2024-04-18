@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html>
+<head>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.product-detail {
+    margin-top: 20px;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info p {
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: #fff;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h2>Product Added to Cart</h2>
+        <p>Your selected item, {{ product.name }}, has been added to the shopping cart.</p>
+
+        <div class="product-detail">
+            <h3>{{ product.name }}</h3>
+            <img src="{{ product.product_image.url }}" alt="{{ product.name }}">
+            <p>Description: {{ product.description }}</p>
+            <div class="product-info">
+                <p>Price: ${{ product.price }}</p>
+                <p>Brand: {{ product.brand }}</p>
+                <p>Age: {{ product.age }}</p>
+            </div>
+        </div>
+
+        <div class="cart-actions">
+            <a href="{% url 'view_cart' %}" class="btn btn-primary">View Cart</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Continue Shopping</a>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
